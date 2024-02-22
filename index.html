@@ -41,10 +41,15 @@
             color: white;
             padding: 10px;
             text-decoration: none;
+            transition: top 0.3s ease; /* Added transition for smooth animation */
         }
 
-        #skip-link:focus {
+        #skip-link:focus, #skip-link:hover {
             top: 0;
+        }
+
+        #skip-link:not(:focus) {
+            top: -40px; /* Hide link when not focused */
         }
 
         section {
