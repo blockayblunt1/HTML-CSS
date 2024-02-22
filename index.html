@@ -3,29 +3,87 @@
 
 <head>
     <title>Songs and Albums</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: lightgrey;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        #skip-link:focus {
+            top: 0;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>This page is for collecting album covers</h1>
-    <p style="color: red;">This is a fanpage about music</p>
-    <a href="https://www.last.fm/"><p><b>CLICK HERE TO FIND ALBUMS AND MUSIC</b></p></a>
-    <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" width="250" alt="Bath's Album Cover">
-    <img src="https://cdn.discordapp.com/attachments/680411038029447209/1199988932776042556/f530f2baf6a87c48ff0fd5c59042f15a.png?ex=65c48bc8&is=65b216c8&hm=fe9d819424a2b9a96778fdec2b57d0ad347daf3c87fa9869026782da9b979e84&" width="250" alt="Bath's Album Cover">
+    <a href="#main-content" id="skip-link">Skip to Main Content</a>
+    <header>
+        <h1>This page is for collecting album covers</h1>
+    </header>
+    <nav>
+        <p style="color: red;"><u>Fanpage about music</u></p>
+        <a href="https://www.last.fm/"><p><b>CLICK HERE TO FIND ALBUMS AND MUSIC</b></p></a>
+    </nav>
+    <main id="main-content">
+        <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" width="250" alt="Bath's Album Cover">
+        <img src="https://cdn.discordapp.com/attachments/680411038029447209/1199988932776042556/f530f2baf6a87c48ff0fd5c59042f15a.png?ex=65c48bc8&is=65b216c8&hm=fe9d819424a2b9a96778fdec2b57d0ad347daf3c87fa9869026782da9b979e84&" width="250" alt="Bath's Album Cover">
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to our collection of album covers! Explore the visual side of your favorite tunes.</p>
-    </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our collection of album covers! Explore the visual side of your favorite tunes.</p>
+        </section>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>Feel at home in our musical haven. Browse diverse album covers and immerse yourself in the world of music.</p>
-    </section>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Feel at home in our musical haven. Browse diverse album covers and immerse yourself in the world of music.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Contact us at <a href="mailto:albumsandmusic@gmail.com">albumsandmusic@gmail.com</a> for inquiries.</p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact us at <a href="mailto:albumsandmusic@gmail.com">albumsandmusic@gmail.com</a> for inquiries.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Songs and Albums. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
