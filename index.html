@@ -21,10 +21,25 @@
         nav {
             background-color: #333;
             padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
         }
 
         main {
             padding: 20px;
+            background-color: #f0f0f0;
+            font-size: 14px;
         }
 
         footer {
@@ -55,6 +70,33 @@
         section {
             margin-bottom: 20px;
         }
+
+        /* Grid layout for the album images */
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .album-grid img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        li {
+            display: block;
+            width: 200px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            color: #0066cc;
+        }
+
+        p {
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -64,12 +106,18 @@
         <h1>This page is for collecting album covers</h1>
     </header>
     <nav>
-        <p style="color: red;"><u>Fanpage about music</u></p>
-        <a href="https://www.last.fm/"><p><b>CLICK HERE TO FIND ALBUMS AND MUSIC</b></p></a>
+        <div>
+            <p style="color: red;"><u>Fanpage about music</u></p>
+        </div>
+        <div>
+            <a href="https://www.last.fm/">CLICK HERE TO FIND ALBUMS AND MUSIC</a>
+        </div>
     </nav>
     <main id="main-content">
-        <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" width="250" alt="Bath's Album Cover">
-        <img src="https://cdn.discordapp.com/attachments/680411038029447209/1199988932776042556/f530f2baf6a87c48ff0fd5c59042f15a.png?ex=65c48bc8&is=65b216c8&hm=fe9d819424a2b9a96778fdec2b57d0ad347daf3c87fa9869026782da9b979e84&" width="250" alt="Bath's Album Cover">
+        <div class="album-grid">
+            <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" alt="Bath's Album Cover">
+            <img src="https://cdn.discordapp.com/attachments/680411038029447209/1199988932776042556/f530f2baf6a87c48ff0fd5c59042f15a.png?ex=65c48bc8&is=65b216c8&hm=fe9d819424a2b9a96778fdec2b57d0ad347daf3c87fa9869026782da9b979e84&" alt="Bath's Album Cover">
+        </div>
 
         <section id="about">
             <h2>About Us</h2>
