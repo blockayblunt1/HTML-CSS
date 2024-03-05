@@ -56,7 +56,7 @@
             color: white;
             padding: 10px;
             text-decoration: none;
-            transition: top 0.3s ease; /* Added transition for smooth animation */
+            transition: top 0.3s ease;
         }
 
         #skip-link:focus, #skip-link:hover {
@@ -64,14 +64,32 @@
         }
 
         #skip-link:not(:focus) {
-            top: -40px; /* Hide link when not focused */
+            top: -40px;
+        }
+
+        #skip-description {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: top 0.3s ease;
+        }
+
+        #skip-description:focus, #skip-description:hover {
+            top: 0;
+        }
+
+        #skip-description:not(:focus) {
+            top: -40px;
         }
 
         section {
             margin-bottom: 20px;
         }
 
-        /* Grid layout for the album images */
         .album-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -81,6 +99,11 @@
         .album-grid img {
             max-width: 100%;
             height: auto;
+            transition: transform 0.3s;
+        }
+
+        .album-grid img:hover {
+            transform: scale(1.1);
         }
 
         li {
@@ -116,10 +139,11 @@
     <main id="main-content">
         <div class="album-grid">
             <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" width="1000" alt="Bath's Album Cover">
-            <img src="https://cdn.discordapp.com/attachments/680411038029447209/1199988932776042556/f530f2baf6a87c48ff0fd5c59042f15a.png?ex=65c48bc8&is=65b216c8&hm=fe9d819424a2b9a96778fdec2b57d0ad347daf3c87fa9869026782da9b979e84&" alt="Bath's Album Cover">
+            <img src="https://th.bing.com/th/id/OIP.5PWU94SIExETHA1H6cuZaAAAAA?rs=1&pid=ImgDetMain" width="1000" alt="Bring Me The Horizon's Album Cover">
         </div>
 
         <section id="about">
+            <a href="#description" id="skip-description">Skip to Description</a>
             <h2>About Us</h2>
             <p>Welcome to our collection of album covers! Explore the visual side of your favorite tunes.</p>
         </section>
@@ -137,6 +161,26 @@
     <footer>
         <p>&copy; 2024 Songs and Albums. All rights reserved.</p>
     </footer>
+
+    <script>
+        function upDate(element) {
+            console.log("Mouseover event triggered");
+
+            console.log("Alt: ", element.alt);
+            console.log("Source: ", element.src);
+
+            document.querySelector('#image').innerText = element.alt;
+
+            document.querySelector('#image').style.backgroundImage = `url('${element.src}')`;
+        }
+
+        function unDo() {
+            console.log("Mouseout event triggered");
+
+            document.querySelector('#image').style.backgroundImage = "url('')";
+            document.querySelector('#image').innerText = "Hover over an image below to display here.";
+        }
+    </script>
 </body>
 
 </html>
