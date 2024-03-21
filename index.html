@@ -144,6 +144,8 @@
             <img src="https://c.saavncdn.com/210/Obsidian-English-2013-500x500.jpg" width="1000" alt="Bath's Album Cover">
             <img src="https://th.bing.com/th/id/OIP.hqfPios72Vaxawr0nT6z3QHaHa?rs=1&pid=ImgDetMain" width="1000" alt="Winter Flower">
             <img src="https://th.bing.com/th/id/OIP.5PWU94SIExETHA1H6cuZaAAAAA?rs=1&pid=ImgDetMain" width="1000" alt="Bring Me The Horizon's Album Cover">
+            <img src="https://art.pixilart.com/sr2809bd93ac7ca.png" width="1000" alt="Flower Boy">
+            <img src="https://i.redd.it/oq2zykeghx571.jpg" width="1000" alt="CMIYGL">
         </div>
 
         <section id="about">
@@ -188,3 +190,37 @@
 </body>
 
 </html>
+
+<style>
+    @media screen and (min-width: 768px) {
+        .album-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .album-grid img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        li {
+            width: 250px;
+        }
+    }
+</style>
+
+<style>
+
+    @media screen and (min-width: 1200px) {
+        .album-grid {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .album-grid img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+</style>
+
